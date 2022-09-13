@@ -18,8 +18,12 @@ console.log(specialChar);
 // var for password length
 // number(prompt(choose length of password between 8 and 128))
 function generatePassword() {
-  var passwordLength = Number(prompt("Choose a password length between 8 and 128:"));
-  console.log(passwordLength);
+    var passwordLength = Number(prompt("Choose a password length between 8 and 128:"));
+    console.log(passwordLength);
+    while (passwordLength < 8 || passwordLength > 128) {
+      passwordLength = Number(prompt("Choose a password length between 8 and 128:"));
+    }
+    console.log(passwordLength);
   
   //confirm character types to use
   lower = confirm("Do you want your password to include lowercase letters?");
