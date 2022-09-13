@@ -1,5 +1,20 @@
 // Assignment code here
+// array for character type lowercase
+// array for character type uppercase
+// array for character type numeric
+// array for character type special characters
 
+// var for password length
+// number(prompt(choose length of password between 8 and 128))
+
+//confirm character types to use
+
+// if else for new array for password generation
+  // concat to combine character types that are chosen into one array
+  // var for new array
+
+//for loop?
+  //function math.floor(math.random() * newarray.length) to determine password from new array
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
