@@ -35,57 +35,65 @@ function generatePassword() {
   console.log(special);
   
   // if else for new array for password generation
-    // concat to combine character types that are chosen into one array
-    // var for new array
-  if (lower === true && upper === true && num === true && special === true) {
-    var all = lowerCase.concat(upperCase, numbers, specialChar);
-    console.log(all);
-  } else if (lower === true && upper === true && num === true && special === false) {
-    var lowerUpperNum = lowerCase.concat(upperCase, numbers);
-    console.log(lowerUpperNum);
-  } else if (lower === true && upper === true && num === false && special === true) {
-    var lowerUpperSpecial = lowerCase.concat(upperCase, specialChar);
-    console.log(lowerUpperSpecial);
-  } else if (lower === true && upper === false && num === true && special === true) {
-    var lowerNumSpecial = lowerCase.concat(numbers, specialChar);
-    console.log(lowerNumSpecial);
-  } else if (lower === false && upper === true && num === true && special === true) {
-    var upperNumSpecial = upperCase.concat(numbers, specialChar);
-    console.log(upperNumSpecial);
-  } else if (lower === false && upper === false && num === true && special === true) {
-    var numSpecial = numbers.concat(specialChar);
-    console.log(numSpecial);
-  } else if (lower === false && upper === true && num === false && special === true) {
-    var upperSpecial = upperCase.concat(specialChar);
-    console.log(upperSpecial);
-  } else if (lower === false && upper === true && num === true && special === false) {
-    var upperNum = upperCase.concat(numbers);
-    console.log(upperNum);
-  } else if (lower === true && upper === false && num === false && special === true) {
-    var lowerSpecial = lowerCase.concat(specialChar);
-    console.log(lowerSpecial);
-  } else if (lower === true && upper === false && num === true && special === false) {
-    var lowerNum = lowerCase.concat(numbers);
-    console.log(lowerNum);
-  } else if (lower === true && upper === true && num === false && special === false) {
-    var lowerUpper = lowerCase.concat(upperCase);
-    console.log(lowerUpper);
-  } else if (lower === true && upper === false && num === false && special === false) {
-    lowerCase;
-    console.log(lowerCase);
-  } else if (lower === false && upper === true && num === false && special === false) {
-    upperCase;
-    console.log(upperCase);
-  } else if (lower === false && upper === false && num === true && special === false) {
-    numbers;
-    console.log(numbers);
-  } else if (lower === false && upper === false && num === false && special === true) {
-    specialChar;
-    console.log(specialChar);
-  }
-
+  // concat to combine character types that are chosen into one array
+  // var for new array
   //for loop?
     //function math.floor(math.random() * newarray.length) to determine password from new array
+  var combined = "";
+
+  for (var i = 1; i <= passwordLength; i++) {
+    if (lower === true && upper === true && num === true && special === true) {
+      var all = lowerCase.concat(upperCase, numbers, specialChar);
+      console.log(all);
+      var randomAll = all[Math.floor(Math.random() * all.length)];
+      console.log(randomAll);
+      combined += randomAll;
+      console.log(combined);
+    } else if (lower === true && upper === true && num === true && special === false) {
+      var lowerUpperNum = lowerCase.concat(upperCase, numbers);
+      console.log(lowerUpperNum);
+    } else if (lower === true && upper === true && num === false && special === true) {
+      var lowerUpperSpecial = lowerCase.concat(upperCase, specialChar);
+      console.log(lowerUpperSpecial);
+    } else if (lower === true && upper === false && num === true && special === true) {
+      var lowerNumSpecial = lowerCase.concat(numbers, specialChar);
+      console.log(lowerNumSpecial);
+    } else if (lower === false && upper === true && num === true && special === true) {
+      var upperNumSpecial = upperCase.concat(numbers, specialChar);
+      console.log(upperNumSpecial);
+    } else if (lower === false && upper === false && num === true && special === true) {
+      var numSpecial = numbers.concat(specialChar);
+      console.log(numSpecial);
+    } else if (lower === false && upper === true && num === false && special === true) {
+      var upperSpecial = upperCase.concat(specialChar);
+      console.log(upperSpecial);
+    } else if (lower === false && upper === true && num === true && special === false) {
+      var upperNum = upperCase.concat(numbers);
+      console.log(upperNum);
+    } else if (lower === true && upper === false && num === false && special === true) {
+      var lowerSpecial = lowerCase.concat(specialChar);
+      console.log(lowerSpecial);
+    } else if (lower === true && upper === false && num === true && special === false) {
+      var lowerNum = lowerCase.concat(numbers);
+      console.log(lowerNum);
+    } else if (lower === true && upper === true && num === false && special === false) {
+      var lowerUpper = lowerCase.concat(upperCase);
+      console.log(lowerUpper);
+    } else if (lower === true && upper === false && num === false && special === false) {
+      lowerCase;
+      console.log(lowerCase);
+    } else if (lower === false && upper === true && num === false && special === false) {
+      upperCase;
+      console.log(upperCase);
+    } else if (lower === false && upper === false && num === true && special === false) {
+      numbers;
+      console.log(numbers);
+    } else if (lower === false && upper === false && num === false && special === true) {
+      specialChar;
+      console.log(specialChar);
+    }
+  }
+  return combined
 }
 
 
