@@ -17,17 +17,31 @@ console.log(specialChar);
 
 // var for password length
 // number(prompt(choose length of password between 8 and 128))
-var passwordLength = Number(prompt("Choose a password length between 8 and 128:"));
-console.log(passwordLength);
+function generatePassword() {
+  var passwordLength = Number(prompt("Choose a password length between 8 and 128:"));
+  console.log(passwordLength);
+  
+  //confirm character types to use
+  lower = confirm("Do you want your password to include lowercase letters?");
+  console.log(lower);
 
-//confirm character types to use
+  upper = confirm("Do you want your password to include uppercase letters?");
+  console.log(upper);
 
-// if else for new array for password generation
-  // concat to combine character types that are chosen into one array
-  // var for new array
+  num = confirm("Do you want your password to include numeric characters?");
+  console.log(num);
 
-//for loop?
-  //function math.floor(math.random() * newarray.length) to determine password from new array
+  special = confirm("Do you want your password to include special characters?");
+  console.log(special);
+  
+  // if else for new array for password generation
+    // concat to combine character types that are chosen into one array
+    // var for new array
+  
+  //for loop?
+    //function math.floor(math.random() * newarray.length) to determine password from new array
+}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
