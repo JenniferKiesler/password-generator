@@ -153,6 +153,10 @@ function generatePassword() {
     } else if (lower === false && upper === false && num === true && special === false) {
       numbers;
       console.log(numbers);
+      var randomNum = numbers[Math.floor(Math.random() * numbers.length)];
+      console.log(randomNum);
+      combined += randomNum;
+      console.log(combined);
 
     } else if (lower === false && upper === false && num === false && special === true) {
       specialChar;
