@@ -53,6 +53,7 @@ function generatePassword() {
       console.log(randomAll);
       combined += randomAll;
       console.log(combined);
+
     } else if (lower === true && upper === true && num === true && special === false) {
       var lowerUpperNum = lowerCase.concat(upperCase, numbers);
       console.log(lowerUpperNum);
@@ -60,42 +61,59 @@ function generatePassword() {
       console.log(randomLowerUpperNum);
       combined += randomLowerUpperNum;
       console.log(combined);
+
     } else if (lower === true && upper === true && num === false && special === true) {
       var lowerUpperSpecial = lowerCase.concat(upperCase, specialChar);
       console.log(lowerUpperSpecial);
+      var randomLowerUpperSpecial = lowerUpperSpecial[Math.floor(Math.random() * lowerUpperSpecial.length)];
+      console.log(randomLowerUpperSpecial);
+      combined += randomLowerUpperSpecial;
+      console.log(combined);
+
     } else if (lower === true && upper === false && num === true && special === true) {
       var lowerNumSpecial = lowerCase.concat(numbers, specialChar);
       console.log(lowerNumSpecial);
+
     } else if (lower === false && upper === true && num === true && special === true) {
       var upperNumSpecial = upperCase.concat(numbers, specialChar);
       console.log(upperNumSpecial);
+
     } else if (lower === false && upper === false && num === true && special === true) {
       var numSpecial = numbers.concat(specialChar);
       console.log(numSpecial);
+
     } else if (lower === false && upper === true && num === false && special === true) {
       var upperSpecial = upperCase.concat(specialChar);
       console.log(upperSpecial);
+
     } else if (lower === false && upper === true && num === true && special === false) {
       var upperNum = upperCase.concat(numbers);
       console.log(upperNum);
+
     } else if (lower === true && upper === false && num === false && special === true) {
       var lowerSpecial = lowerCase.concat(specialChar);
       console.log(lowerSpecial);
+
     } else if (lower === true && upper === false && num === true && special === false) {
       var lowerNum = lowerCase.concat(numbers);
       console.log(lowerNum);
+
     } else if (lower === true && upper === true && num === false && special === false) {
       var lowerUpper = lowerCase.concat(upperCase);
       console.log(lowerUpper);
+
     } else if (lower === true && upper === false && num === false && special === false) {
       lowerCase;
       console.log(lowerCase);
+
     } else if (lower === false && upper === true && num === false && special === false) {
       upperCase;
       console.log(upperCase);
+
     } else if (lower === false && upper === false && num === true && special === false) {
       numbers;
       console.log(numbers);
+
     } else if (lower === false && upper === false && num === false && special === true) {
       specialChar;
       console.log(specialChar);
