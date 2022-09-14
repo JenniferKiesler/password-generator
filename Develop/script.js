@@ -15,11 +15,11 @@ console.log(numbers);
 var specialChar = ["!", "#", "$", "%", "&", "'", '"', "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", ">", "=", "?", "@", "[", "]", "^", "_", "{", "}", "|", "~", "`"];
 console.log(specialChar);
 
-// var for password length
-// number(prompt(choose length of password between 8 and 128))
 function generatePassword() {
-    var passwordLength = Number(prompt("Choose a password length between 8 and 128:"));
+  // var for password length
+  var passwordLength = Number(prompt("Choose a password length between 8 and 128:"));
     console.log(passwordLength);
+    // while loop until length is entered correctly
     while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
       if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
         alert("Input is not valid. Enter a number between 8 and 128.");
@@ -41,19 +41,25 @@ function generatePassword() {
   special = confirm("Do you want your password to include special characters?");
   console.log(special);
   
-  // if else for new array for password generation
-  // concat to combine character types that are chosen into one array
-  // var for new array
-  //for loop?
-    //function math.floor(math.random() * newarray.length) to determine password from new array
+  // for loop
+    // if else for creating random password based on character type choices
+      // var for new array
+        // concat to combine character types that are chosen into one array
+      //function math.floor(math.random() * newarray.length) to determine password from new array
+  
+  // variable for the string of the combined random characters
   var combined = "";
 
+  // for loop will end once the number entered for password length is reached
   for (var i = 1; i <= passwordLength; i++) {
     if (lower === true && upper === true && num === true && special === true) {
+      // combines the character types' arrays that were chosen to be included
       var all = lowerCase.concat(upperCase, numbers, specialChar);
       console.log(all);
+      // randomly chooses characters in the combined array
       var randomAll = all[Math.floor(Math.random() * all.length)];
       console.log(randomAll);
+      // adds all the randomly chosen characters together
       combined += randomAll;
       console.log(combined);
 
@@ -170,7 +176,7 @@ function generatePassword() {
       console.log(combined);
     }
   }
-  return combined
+  return combined // stops the function and returns the value of combined
 }
 
 
