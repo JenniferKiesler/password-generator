@@ -32,7 +32,7 @@ function generatePassword() {
   upper = confirm("Do you want your password to include uppercase letters?");
   console.log(upper);
 
-  num = confirm("Do you want your password to include numeric characters?");
+  num = confirm("Do you want your password to include numbers?");
   console.log(num);
 
   special = confirm("Do you want your password to include special characters?");
@@ -56,6 +56,10 @@ function generatePassword() {
     } else if (lower === true && upper === true && num === true && special === false) {
       var lowerUpperNum = lowerCase.concat(upperCase, numbers);
       console.log(lowerUpperNum);
+      var randomLowerUpperNum = lowerUpperNum[Math.floor(Math.random() * lowerUpperNum.length)];
+      console.log(randomLowerUpperNum);
+      combined += randomLowerUpperNum;
+      console.log(combined);
     } else if (lower === true && upper === true && num === false && special === true) {
       var lowerUpperSpecial = lowerCase.concat(upperCase, specialChar);
       console.log(lowerUpperSpecial);
