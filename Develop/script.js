@@ -89,6 +89,10 @@ function generatePassword() {
     } else if (lower === false && upper === false && num === true && special === true) {
       var numSpecial = numbers.concat(specialChar);
       console.log(numSpecial);
+      var randomNumSpecial = numSpecial[Math.floor(Math.random() * numSpecial.length)];
+      console.log(randomNumSpecial);
+      combined += randomNumSpecial;
+      console.log(combined);
 
     } else if (lower === false && upper === true && num === false && special === true) {
       var upperSpecial = upperCase.concat(specialChar);
