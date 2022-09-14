@@ -161,6 +161,10 @@ function generatePassword() {
     } else if (lower === false && upper === false && num === false && special === true) {
       specialChar;
       console.log(specialChar);
+      var randomSpecial = specialChar[Math.floor(Math.random() * specialChar.length)];
+      console.log(randomSpecial);
+      combined += randomSpecial;
+      console.log(combined);
     }
   }
   return combined
