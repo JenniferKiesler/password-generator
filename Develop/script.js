@@ -129,6 +129,10 @@ function generatePassword() {
     } else if (lower === true && upper === true && num === false && special === false) {
       var lowerUpper = lowerCase.concat(upperCase);
       console.log(lowerUpper);
+      var randomLowerUpper = lowerUpper[Math.floor(Math.random() * lowerUpper.length)];
+      console.log(randomLowerUpper);
+      combined += randomLowerUpper;
+      console.log(combined);
 
     } else if (lower === true && upper === false && num === false && special === false) {
       lowerCase;
