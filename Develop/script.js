@@ -20,7 +20,7 @@ console.log(specialChar);
 function generatePassword() {
     var passwordLength = Number(prompt("Choose a password length between 8 and 128:"));
     console.log(passwordLength);
-    while (passwordLength < 8 || passwordLength > 128) {
+    while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
       passwordLength = Number(prompt("Choose a password length between 8 and 128:"));
     }
     console.log(passwordLength);
