@@ -22,7 +22,7 @@ function generatePassword() {
     console.log(passwordLength);
     while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
       if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
-        alert("Input not valid. Choose a number between 8 and 128.");
+        alert("Input is not valid. Enter a number between 8 and 128.");
         passwordLength = Number(prompt("Choose a password length between 8 and 128:"));
       }
     }
