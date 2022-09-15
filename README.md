@@ -13,3 +13,6 @@ When the generate password button is clicked, a series of prompts for the passwo
 
 For each prompt the input is validated and at least one character type (lowercase, uppercase, numeric, or special characters) should be selected.
 
+## Visuals
+
+![Screenshot](Develop/images/password-generator.png)
