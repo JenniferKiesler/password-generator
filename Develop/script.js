@@ -28,7 +28,7 @@ function generatePassword() {
     }
     console.log(passwordLength);
   
-  //confirm character types to use
+  // confirm character types to use
   lower = confirm("Do you want your password to include lowercase letters?");
   console.log(lower);
 
@@ -45,11 +45,6 @@ function generatePassword() {
     alert("At least one character type (lowercase, uppercase, numbers, or special characters) must be selected!");
     generatePassword()
   }
-  // for loop
-    // if else for creating random password based on character type choices
-      // var for new array
-        // concat to combine character types that are chosen into one array
-      //function math.floor(math.random() * newarray.length) to determine password from new array
   
   // variable for the string of the combined random characters
   var combined = "";
