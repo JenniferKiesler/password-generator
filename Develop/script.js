@@ -41,6 +41,10 @@ function generatePassword() {
   special = confirm("Do you want your password to include special characters?");
   console.log(special);
   
+  if (lower === false && upper === false && num === false && special === false) {
+    alert("At least one character type (lowercase, uppercase, numbers, or special characters) must be selected!");
+    generatePassword()
+  }
   // for loop
     // if else for creating random password based on character type choices
       // var for new array

@@ -40,6 +40,11 @@ function getUserOptions() {
   special = confirm("Do you want your password to include special characters?");
   console.log(special);
 
+  if (!lower && !upper && !num && !special) {
+      alert("At least one character type (lowercase, uppercase, numbers, or special characters) must be selected!");
+      getUserOptions()
+  }
+  
   return {
     passwordLength,
     lower,
